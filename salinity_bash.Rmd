@@ -83,7 +83,7 @@ gdalinfo ESACCI-SEASURFACESALINITY-L4-SSS-MERGED_OI_7DAY_RUNNINGMEAN_DAILY_25km-
 Another option explored was creating a virtual raster. The ambition was to use the raster to calculate the Fourier transform in parallel, but again it failed because the netCDF files are not geo referenced.
 
 ```{bash engine.opts='-l'}
-cd cd /Users/juanrocha/Documents/Projects/DATA/ESA_ECV_ocean_salinity/2019/01
+cd /Users/juanrocha/Documents/Projects/DATA/ESA_ECV_ocean_salinity/2019/01
 gdalbuildvrt -a_srs EPSG:6933 index.vrt *.nc
 ```
 
@@ -127,7 +127,7 @@ cd /Users/juanrocha/Documents/Projects/DATA/ESA_ECV_ocean_salinity/2019/01
 gdalinfo NETCDF:"ESACCI-SEASURFACESALINITY-L4-SSS-MERGED_OI_7DAY_RUNNINGMEAN_DAILY_25km-20190101-fv2.31.nc":sss
 ```
 ```{bash engine.opts='-l'}
-cd 2019/01
+cd /Users/juanrocha/Documents/Projects/DATA/ESA_ECV_ocean_salinity/2019/01
 gdallocationinfo -valonly NETCDF:"ESACCI-SEASURFACESALINITY-L4-SSS-MERGED_OI_7DAY_RUNNINGMEAN_DAILY_25km-20190101-fv2.31.nc":sss 350 350
 
 ```
